@@ -50,11 +50,11 @@
 </head>
 <body>
   <div class="image-container">
-  <img src="https://i.pinimg.com/originals/bc/cd/8d/bccd8d514024b3547ef6d05843ce4864.gif" alt="First Image" class="active">
-  <img src="https://i.giphy.com/shJoaSf7VpGnu.webp" alt="Second Image">
-  <img src="https://i.giphy.com/WYoobOj0i6lJm.webp" alt="Third Image">
-</div>
-  
+    <img src="https://i.pinimg.com/originals/bc/cd/8d/bccd8d514024b3547ef6d05843ce4864.gif" alt="First Image">
+    <img src="https://i.giphy.com/shJoaSf7VpGnu.webp" alt="Second Image">
+    <img src="https://i.giphy.com/WYoobOj0i6lJm.webp" alt="Third Image">
+  </div>
+
   <div class="chat-widget">
     <elevenlabs-convai agent-id="5mz0QGMTS6vciobpmiXO"></elevenlabs-convai>
     <script src="https://elevenlabs.io/convai-widget/index.js" async></script>
@@ -64,9 +64,9 @@
     let currentIndex = 0;
 
     function showNextImage() {
-      images[currentIndex].classList.remove('active');
+      images[currentIndex].style.opacity = "0";
       currentIndex = (currentIndex + 1) % images.length;
-      images[currentIndex].classList.add('active');
+      images[currentIndex].style.opacity = "1";
     }
 
     setInterval(showNextImage, 4000);
