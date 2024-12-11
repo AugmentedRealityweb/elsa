@@ -29,10 +29,17 @@
     }
 
     .chat-widget {
-      position: absolute;
-      bottom: 10%;
-      width: 80%;
-      max-width: 400px;
+      position: fixed;
+      top: 40%;
+      left: 30%;
+      transform: translate(-50%, -50%);
+      width: 450px;
+      height: 500px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      background-color: transparent;
+      z-index: 1;
     }
   </style>
 </head>
