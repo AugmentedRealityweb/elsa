@@ -6,26 +6,31 @@
     body {
       margin: 0;
       padding: 0;
-      background: #000;
       display: flex;
       justify-content: center;
       align-items: center;
       height: 100vh;
-      position: relative;
+      background: #000;
+      flex-direction: column;
     }
 
     .image-container {
       position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 1;
+      overflow: hidden;
     }
 
     .image-container img {
-      max-width: 100%;
-      max-height: 100%;
+      width: 100%;
+      height: 100%;
       object-fit: cover;
-      border: 2px solid #fff;
+      position: absolute;
+      opacity: 0;
+      transition: opacity 1s ease-in-out;
     }
 
     .chat-widget {
@@ -46,6 +51,8 @@
 <body>
   <div class="image-container">
     <img src="https://i.pinimg.com/originals/bc/cd/8d/bccd8d514024b3547ef6d05843ce4864.gif" alt="First Image">
+    <img src="https://i.giphy.com/shJoaSf7VpGnu.webp" alt="First Image">
+    <img src="https://i.giphy.com/WYoobOj0i6lJm.webp" alt="First Image">
   </div>
 
   <div class="chat-widget">
