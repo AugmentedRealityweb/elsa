@@ -33,6 +33,10 @@
       transition: opacity 1s ease-in-out;
     }
 
+    .image-container img:first-child {
+      opacity: 1;
+    }
+
     .chat-widget {
       position: fixed;
       top: 40%;
